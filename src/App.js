@@ -14,6 +14,20 @@ function App() {
           <Weather city={c}></Weather>
         </div>
       </div>
+      <div className="container">
+        <div className="card">
+          <Weather city={c}></Weather>
+        </div>
+        <div className="card">
+          <Weather city={c}></Weather>
+        </div>
+        <div className="card">
+          <Weather city={c}></Weather>
+        </div>
+        <div className="card">
+          <Weather city={c}></Weather>
+        </div>
+      </div>
     </div>
   )
 }
