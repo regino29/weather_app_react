@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 120%;
+  background-size: cover;
+  background-image: url(https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b);
+}
+
+.card {
+  margin-bottom: 2em;
+  margin-right: 2em;
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+}
+
+
+.container{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

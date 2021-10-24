@@ -1,0 +1,27 @@
+h1.temp {
+  margin: 0;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: 'Loading';
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
