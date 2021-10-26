@@ -7,42 +7,47 @@ const api = {
 }
 
 const Weather = (props) => {
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
 
-  const [data, setData] = useState({})
+  // const [data, setData] = useState({})
 
-  const search = async () => {
-    setLoading(true)
-    fetch(`${api.base}${props.city}&units=metric&appid=${api.key}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setData(result)
-        setLoading(false)
-      })
-  }
+  // const search = async () => {
+  //   setLoading(true)
+  //   fetch(`${api.base}${props.city}&units=metric&appid=${api.key}`)
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setData(result)
+  //       setLoading(false)
+  //     })
+  // }
 
-  useEffect(() => {
-    search()
-  }, [props.city])
+  // useEffect(() => {
+  //   search()
+  // }, [props.city])
 
-  if (loading) return <h1>loading</h1>
+  if (props.loading) return <h1>loading</h1>
+
+ 
 
   return (
     <div className={`weather `}>
-      <h2 className="city">{`Weather in ${data.name}`}</h2>
-      <h1 className="temp">{`${data.main.temp}°C`}</h1>
+      <h2 className="city">{`Weather in ${props.data.name}`}</h2>
+      <h1 className="temp">{`${props.data.main.temp}°C`}</h1>
       <div className="flex">
         <img
-          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
           alt=""
           className="icon"
         />
-        <div className="description">{data.weather[0].description}</div>
+        <div className="description">{props.data.weather[0].description}</div>
       </div>
-      <div className="humidity">{`Humidity: ${data.main.humidity}%`}</div>
-      <div className="wind">{`Wind speed: ${data.wind.speed} km/h`}</div>
+      <div className="humidity">{`Humidity: ${props.data.main.humidity}%`}</div>
+      <div className="wind">{`Wind speed: ${props.data.wind.speed} km/h`}</div>
     </div>
   )
 }
+
+
+
 
 export default Weather
