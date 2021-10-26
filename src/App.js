@@ -52,19 +52,19 @@ function App() {
       <div className="container">
         <div className="card">
           <h2>27/10/2021</h2>
-          <Weather data={data.current} loading={loading} type={1}></Weather>
+          <Weather data={data.daily} loading={loading} type={1}></Weather>
         </div>
         <div className="card">
           <h2>28/10/2021</h2>
-          <Weather data={data.current} loading={loading} type={2}></Weather>
+          <Weather data={data.daily} loading={loading} type={2}></Weather>
         </div>
         <div className="card">
           <h2>29/10/2021</h2>
-          <Weather data={data.current} loading={loading} type={3}></Weather>
+          <Weather data={data.daily} loading={loading} type={3}></Weather>
         </div>
         <div className="card">
           <h2>30/10/2021</h2>
-          <Weather data={data.current} loading={loading} type={4}></Weather>
+          <Weather data={data.daily} loading={loading} type={4}></Weather>
         </div>
       </div>
     </div>
