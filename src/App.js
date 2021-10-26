@@ -29,8 +29,11 @@ function App() {
   }
 
   useEffect(() => {
-    search()
-  }, [c])
+    search();
+  }, [c]);
+
+
+  
 
   return (
     <div>
