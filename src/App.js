@@ -2,6 +2,7 @@ import './App.css'
 import Search from './components/Search'
 import Weather from './components/Weather'
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 
 const api = {
   key: '1ea4a48ba1c9e89c6d1a5e9077ad6693',
@@ -42,6 +43,9 @@ function App() {
 
   return (
     <div>
+      <Helmet>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+      </Helmet>
       <div className="container">
         <div className="card">
           <Search city={setC}></Search>
