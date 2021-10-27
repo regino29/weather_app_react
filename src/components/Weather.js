@@ -20,8 +20,13 @@ const Weather = (props) => {
     speed = props.data[i].wind_speed
   }
 
+
+  const days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"] ;
+  const curDay = new Date().getDay();
+
   return (
     <div className={`weather `}>
+      <h2>{days[(curDay-1+props.type)%7]}</h2>
       <h1 className="temp">{`${temp}°C`}</h1>
       <div className="flex">
         <img
